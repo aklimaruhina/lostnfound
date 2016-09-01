@@ -3,7 +3,7 @@
 
 	$email = $_POST['email'];
 	
-	$password = $_POST['password'];
+	$password = md5($_POST['password']);
 	$query = "SELECT * FROM users WHERE email ='".$email."' AND password = '".$password."'";
 	$result = mysqli_query($link, $query);
 	$user = array();
