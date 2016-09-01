@@ -1,0 +1,26 @@
+body{ }
+.page-header {color: #fff;}
+.page-header label{color: #000;}
+.page-header h1{ font-size: 45px; }
+.page-header small{ color: #FDDD66; font-size: 20px;}
+.nopadding{ margin:0; padding: 0}
+header{position: relative;}
+.title{position: absolute;top: 20%;
+left: 10%;}
+.search{ margin-top: 20px;}
+.search h3,h4,h5{ color: #fff;}
+.search input{ width: 320px;
+height: 50px;
+border-radius: 5px;
+padding: 5px;}
+.searchbox{ color: #000; font-size: 20px;}
+
+.logout_bttn{float: right; display: block;margin-left: 10px;
+margin-top: 10px;}
+
+.admin_name{ color: #ddd; }
+.admin_name img{ margin-top: 10px;
+margin-right: 10px; }
+.floatright{ float: right;}
+.floatleft{float: left;}
+
