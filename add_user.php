@@ -27,7 +27,6 @@ if($total_user === 0){
 else{ 
   $is_admin=0;
 }
-//dd($user_type);
 
 //hold full_name
 if(isset($_POST['first_name']))
@@ -76,8 +75,9 @@ move_uploaded_file($photo_tmp, $photo_path);
 $query1 = "INSERT INTO users(username,email, password, is_admin, created, created_by, modified, modified_by) 
 			values('".$username."','".$email."','".$password."','".$is_admin."' , NOW(), '0', '0','0' )";
 $success = mysqli_query($link,$query1);
+var_dump($query1);
 
-	$query_id = "SELECT * FROM users WHERE email ='".$email."' AND username = '".$username."' AND password = '".$password."';";
+	$query_id = "SELECT * FROM users WHERE email ='".$email."' AND username = '".$username."' AND password = '".$password."'";
 	$result = mysqli_query($link, $query_id);
 	$user = array();
 	$user = mysqli_fetch_assoc($result);
@@ -87,7 +87,7 @@ $success = mysqli_query($link,$query1);
 
  $query2 = "INSERT INTO profiles(user_id,first_name, last_name, mobile_number,email, address,zip_code, city, district, status,created, created_by, modified,modified_by, deleted_at, profile_picture) 
  			values('".$reg_user."','".$first_name."','".$last_name."','".$mobile_number."', '".$email."','".$address."','".$zip."','".$city."','".$district."','1',NOW(), '0','0','0','0','".$photo_path."')";
-//dd($query);
+dd($query);
 
 $success = mysqli_query($link,$query2);
 
